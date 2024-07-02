@@ -143,6 +143,124 @@ void pattern11(int n){
         cout << endl;
     }       
 }
+
+void pattern12(int n){
+    for (int i = 0; i < n; i++)
+    {
+        // number
+        for (int j = 0; j <= i; j++)
+        {
+            cout << j + 1 << " ";
+        }
+        // space
+        for (int j = 0; j < 2 * (n - i - 1); j++)
+        {
+            cout << "  ";
+        }
+        // number
+        for (int j = 0; j <= i; j++)
+        {
+            cout << i + 1 - j << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern13(int n){
+    int num = 1;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << num <<" ";
+            num++;
+        }
+        cout << endl;
+    }
+}
+
+void pattern14(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern15(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'A'; ch < 'A'+n-i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern16(int n){
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A' + i;
+        for (int j = 0; j<=i; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;        
+    }
+}
+
+void pattern17(int n){
+    for (int i = 0; i < n; i++)
+    {
+        // space
+        for (int j = 0; j < n-i-1; j++)
+        {
+            cout << " ";
+        }
+        // Alphabet
+        char ch = 'A';
+        int breakpoint = (2 * i + 1) / 2;
+        for (int j = 1; j <= 2*i+1; j++)
+        {
+            cout << ch;
+            // if(j <= (2*i+1)/2){
+            //     ch++;
+            // }
+            // else{
+            //     ch--;
+            // }
+            if(j <= breakpoint){
+                ch++;
+            }
+            else{
+                ch--;
+            }
+        }        
+        // space
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+void pattern18(int n){
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A'+n-1;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch--;
+        }
+        cout << endl;      
+    }
+}
 int main()
 {
     // int n;
@@ -255,12 +373,82 @@ int main()
     // }
 
     // Pattern 11
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern11(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 12
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern12(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 13
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern13(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 14
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern14(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 15
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern15(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 16
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern16(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 17
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern17(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 18
     for (int i = 0; i < t; i++)
     {
         int n;
         // cout << "Enter te value for pattern";
         cin >> n;
-        pattern11(n);
+        pattern18(n);
         cout << endl;
     }
     return 0;
