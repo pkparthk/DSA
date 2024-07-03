@@ -11,7 +11,6 @@ void pattern1(int n){
         }
         cout << endl;
     }
-    
 }
 
 void pattern2(int n){
@@ -261,6 +260,126 @@ void pattern18(int n){
         cout << endl;      
     }
 }
+
+void pattern19(int n){
+    for (int i = 0; i < n; i++)
+    {
+        // stars
+        for (int j = 0; j < n-i; j++)
+        {
+            cout << "* ";
+        }        
+        // spaces
+        for (int j = 0; j < 2*i; j++)
+        {
+            cout << " ";
+        }
+        // stars
+        for (int j = 0; j < n-i; j++)
+        {
+            cout << "* ";
+        }   
+        cout << endl;        
+    }
+    for (int i = 0; i < n; i++)
+    {
+        // star
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "* ";
+        }
+        // space
+        for (int j = 0; j < 2*(n-i-1); j++)
+        {
+            cout << " ";
+        }
+        // star
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+void pattern20(int n){
+    int spaces = 2 * n - 2;
+    for (int i = 1; i <= 2*n-1; i++)
+    {
+        int star = i;
+        if(i > n){
+            star = 2*n-i;
+        }
+        // star 
+        for (int j = 1; j <=star; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 1; j <= spaces; j++)
+        {
+            cout << " ";
+        }
+        // star
+        for (int j = 1; j <= star; j++)
+        {
+            cout << "*";
+        }
+        if (i < n)
+        {
+            spaces -= 2;
+        }
+        else{
+            spaces += 2;
+        }        
+        cout << endl;
+    }
+}
+
+void pattern21(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if(i == 0 || i == n-1 || j == 0 || j == n-1){
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+void pattern22(int n){
+    for (int i = 0; i < 2*n-1; i++)
+    {
+        for (int j = 0; j < 2*n-1; j++)
+        {
+            int top = i;
+            int left = j;
+            int right = (2 * n - 2) - j;
+            int down = (2 * n - 2) - i;
+            cout << (n - min(min(top, down), min(right, left)));
+        }
+        cout << endl;
+    }
+}
+void pattern23(int n){
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if(i == j || i+j == n-1){
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }    
+}
 int main()
 {
     // int n;
@@ -443,12 +562,62 @@ int main()
     // }
 
     // Pattern 18
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern18(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 19
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern19(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 20
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern20(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 21
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern21(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 22
+    // for (int i = 0; i < t; i++)
+    // {
+    //     int n;
+    //     // cout << "Enter te value for pattern";
+    //     cin >> n;
+    //     pattern22(n);
+    //     cout << endl;
+    // }
+
+    // Pattern 23
     for (int i = 0; i < t; i++)
     {
         int n;
         // cout << "Enter te value for pattern";
         cin >> n;
-        pattern18(n);
+        pattern23(n);
         cout << endl;
     }
     return 0;
