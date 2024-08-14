@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Better approach
 // Basic one
 
 // string twoSum(int n, vector<int> &arr, int target)
@@ -18,22 +19,68 @@ using namespace std;
 
 
 // Optimized one
-vector<int> twoSum(int n, vector<int> &arr, int target)
+// vector<int> twoSum(int n, vector<int> &arr, int target)
+// {
+//     vector<int> ans;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (arr[i] + arr[j] == target)
+//             {
+//                 ans.push_back(i);
+//                 ans.push_back(j);
+//                 return ans;
+//             }
+//         }
+//     }
+//     return {-1, -1};
+// }
+
+// int main()
+// {
+//     int n;
+//     cout << "Enter the number of element in array" << endl;
+//     cin >> n;
+//     vector<int> arr(n);
+//     cout << "Enter the elements of array" << endl;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+//     int target;
+//     cout << "Enter the target sum" << endl;
+//     cin >> target;
+    
+//     // FOR Variant 1: Basic 
+//     // string ans = twoSum(n, arr, target);
+//     // cout << "This is the answer for variant 1: " << ans << endl;
+
+//     // FOR Variant 2: Optimized
+//     vector<int> ans = twoSum(n, arr, target);
+//     cout << "This is the answer for variant 2: " << ans[0] << " " << ans[1] << endl;
+//     return 0;
+// }
+
+
+// Optimal Approach
+
+string twoSum(int n, vector<int> arr, int target)
 {
-    vector<int> ans;
+    map<int, int> mpp;
     for (int i = 0; i < n; i++)
     {
-        for (int j = i + 1; j < n; j++)
+        int a = arr[i];
+        int more = target - a;
+        if (mpp.find(more) != mpp.end())
         {
-            if (arr[i] + arr[j] == target)
-            {
-                ans.push_back(i);
-                ans.push_back(j);
-                return ans;
-            }
+            // return "YES";
+            return to_string(mpp[more]) + " " + to_string(i);
         }
+        mpp[a] = i;
     }
-    return {-1, -1};
+    // return "NO";
+    return "-1 -1";
 }
 
 int main()
@@ -50,13 +97,8 @@ int main()
     int target;
     cout << "Enter the target sum" << endl;
     cin >> target;
-    
-    // FOR Variant 1: Basic 
-    // string ans = twoSum(n, arr, target);
-    // cout << "This is the answer for variant 1: " << ans << endl;
 
-    // FOR Variant 2: Optimized
-    vector<int> ans = twoSum(n, arr, target);
-    cout << "This is the answer for variant 2: " << ans[0] << " " << ans[1] << endl;
+    string ans = twoSum(n, arr, target);
+    cout << "This is the answer for variant 1: " << ans << endl;
     return 0;
 }
