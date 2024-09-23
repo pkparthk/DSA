@@ -22,6 +22,11 @@
 /24MissingRepeatingNo.exe
 /25NumberOfInversion.exe
 /26ReversePairs.exe
+
+
 05 Linked List/01Intro.exe
 05 Linked List/02Deletion.exe
 05 Linked List/03Insertion.exe
+05 Linked List/04DoublyLLDeletion.exe
+05 Linked List/05InsertionDDL.exe
+05 Linked List/06Reverse.exe
