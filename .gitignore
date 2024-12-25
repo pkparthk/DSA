@@ -51,17 +51,7 @@
 05 Linked List/26CloneNode.exe
 
 
-06 Stack & Queue/01StackIntro.exe
-06 Stack & Queue/02QueueIntro.exe
-06 Stack & Queue/03BalancedParantheses.exe
-06 Stack & Queue/04MinStack.exe
-06 Stack & Queue/05InfixToPostfix.exe
-06 Stack & Queue/06InfixToPrefix.exe
-06 Stack & Queue/07PostfixToInfix.exe
-06 Stack & Queue/08PostfixToPrefix.exe
-06 Stack & Queue/09PrefixToPostfix.exe
-06 Stack & Queue/10NextGreaterElem.exe
-06 Stack & Queue/11TrappingRainwater.exe
+06 Stack & Queue/*.exe
 
 
 07 Binary Tree/*.exe
