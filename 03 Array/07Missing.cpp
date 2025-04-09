@@ -82,7 +82,7 @@ int main()
 //     int xor1 = 0, xor2 = 0;
 
 //     // XOR all array elements
-//     for (int i = 0; i < n - 1; i++)
+//     for (int i = 0; i < n ; i++)
 //     {
 //         xor2 ^= arr[i];
 //     }
